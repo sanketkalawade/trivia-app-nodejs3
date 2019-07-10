@@ -1,0 +1,24 @@
+{
+  "name": "trivia-app",
+  "version": "1.0.0",
+  "description": "this is demo app built on template enging(handlebars) and node js",
+  "main": "controller/app.js",
+  "scripts": {
+    "start": "node controller/app.js",
+    "dev": "nodemon controller/app.js -e js,hbs"
+  },
+  "author": "sanket k. kalawade",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "hbs": "^4.0.4",
+    "moment": "^2.24.0",
+    "mongodb": "^3.2.7",
+    "mongoose": "^5.6.4",
+    "validator": "^11.1.0"
+  }
+}

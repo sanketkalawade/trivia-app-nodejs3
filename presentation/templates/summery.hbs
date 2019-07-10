@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>summery</h1>
+        <h4>Hello {{ userName }}</h4>
+        <p>Here are the answers selected:</p>
+        <hr>
+        <p>Who is the best cricketer in the world?</p>
+        <p>Your Answer: {{questionOneAnswer}}</p>
+        <hr>
+        <p>What are the colors in the national flag?</p>
+        <p>Your Answer: {{questionTwoAnswer}}</p>
+
+        <button onclick="showHistory()">History</button>
+
+        <script>
+            function showHistory(){
+                fetch('/showHistory?ownerId='+"{{ownerId}}").then(res=> {
+                    redirect:window.location.replace(res.url)  
+                }).catch(error=>console.log(error))
+            }
+        </script>
+    </body>
+    
+</html>
